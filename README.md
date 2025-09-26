@@ -31,13 +31,4 @@ This project is a **Personal Portfolio Website** developed using modern web tech
 - **Contact** – Contact form with EmailJS integration and contact details  
 - **Footer** – Social links (LinkedIn, GitHub, Facebook) and copyright  
 
-## Getting Started  
 
-### Prerequisites  
-To run this project locally, you only need a web browser.  
-Optionally, install **Live Server** (VS Code extension) for an optimized local development experience.  
-
-### Installation  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/blinasopjani/portfolio.git
