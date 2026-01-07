@@ -22,13 +22,5 @@ This project is a **Personal Portfolio Website** developed using modern web tech
 - Clean and modern user interface  
 - Animations and effects for a dynamic experience  
 
-## Structure  
-- **Header & Navigation** – Fixed header with responsive navigation  
-- **Home** – Introduction, animated titles, and technology highlights  
-- **About Me** – Professional description, skills, and experience  
-- **Portfolio** – Key projects: Online Store, KPN FTU Box Scanner App, Flash Taxi, IRA Outdoor Management Dashboard, Siqa Shop, Student Registration System  
-- **Testimonials** – Feedback from mentors and clients  
-- **Contact** – Contact form with EmailJS integration and contact details  
-- **Footer** – Social links (LinkedIn, GitHub, Facebook) and copyright  
 
 
