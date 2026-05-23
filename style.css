@@ -1,28 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg: #09090b;
-  --bg-card: #18181b;
-  --bg-card-hover: #27272a;
-  --text: #fafafa;
-  --text-secondary: #a1a1aa;
+  /* Ngjyra Neutrale (Neutral dark theme) */
+  --bg: #171717; 
+  --bg-card: #262626;
+  --bg-card-hover: #333333;
+  --text: #f5f5f5;
+  --text-secondary: #a3a3a3;
   
-  --primary: #3b82f6;
-  --primary-hover: #2563eb;
+  /* Aty-Ketu Portokalli & Violet */
+  --primary: #f97316; /* Portokalli */
+  --coral: #f97316;   /* Portokalli */
+  --coral-bg: rgba(249, 115, 22, 0.1);
+  --violet: #8b5cf6;  /* Violet */
+  --violet-bg: rgba(139, 92, 246, 0.1);
   
   --blue: #3b82f6;
   --blue-bg: rgba(59, 130, 246, 0.1);
-  --coral: #f43f5e;
-  --coral-bg: rgba(244, 63, 94, 0.1);
   --emerald: #10b981;
   --emerald-bg: rgba(16, 185, 129, 0.1);
-  --violet: #8b5cf6;
-  --violet-bg: rgba(139, 92, 246, 0.1);
   --rose: #e11d48;
   --rose-bg: rgba(225, 29, 72, 0.1);
   
-  --border: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(255, 255, 255, 0.2);
+  --border: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(249, 115, 22, 0.4);
 }
 
 * {
@@ -53,9 +54,9 @@ a {
 /* Cursor & Grain */
 .cursor-glow {
   position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 60%); /* Violet glow */
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
@@ -69,7 +70,7 @@ a {
   width: 100vw; height: 100vh;
   pointer-events: none;
   z-index: 9998;
-  opacity: 0.04;
+  opacity: 0.03;
 }
 
 /* Navigation */
@@ -84,7 +85,7 @@ a {
 }
 #navbar.scrolled {
   padding: 1rem 0;
-  background: rgba(9, 9, 11, 0.8);
+  background: rgba(23, 23, 23, 0.9);
   border-bottom: 1px solid var(--border);
 }
 
@@ -97,10 +98,11 @@ a {
 .logo {
   font-weight: 700;
   font-size: 1.2rem;
+  letter-spacing: -0.02em;
 }
 .logo span {
-  color: var(--text-secondary);
-  font-weight: 400;
+  color: var(--primary); /* Portokalli */
+  font-weight: 600;
 }
 
 .nav-links {
@@ -109,7 +111,7 @@ a {
 }
 
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
   transition: color 0.3s;
 }
@@ -136,8 +138,8 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
@@ -145,21 +147,25 @@ a {
 }
 
 .btn-primary {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--primary); /* Portokalli */
+  color: #fff;
+  border: 1px solid var(--primary);
 }
 
 .btn-primary:hover {
-  background: #e5e5e5;
+  background: #ea580c;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
 
 .btn-outline {
   border: 1px solid var(--border);
   background: transparent;
+  color: var(--text);
 }
 
 .btn-outline:hover {
-  background: rgba(255,255,255,0.05);
+  background: var(--bg-card);
+  border-color: var(--text-secondary);
 }
 
 /* Hero Section */
@@ -172,7 +178,7 @@ a {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 4rem;
   align-items: center;
 }
@@ -180,12 +186,12 @@ a {
 .availability-badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1rem;
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--emerald);
+  gap: 0.6rem;
+  padding: 0.4rem 1.2rem;
+  background: var(--violet-bg); /* Violet badge */
+  color: var(--violet);
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 500;
   margin-bottom: 2rem;
 }
@@ -193,34 +199,39 @@ a {
 .pulse-dot {
   width: 8px;
   height: 8px;
-  background: var(--emerald);
+  background: var(--violet);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--emerald);
+  box-shadow: 0 0 10px var(--violet);
   animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(139, 92, 246, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0); }
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .editorial-italic {
   font-family: serif;
   font-style: italic;
   font-weight: 400;
+  color: var(--violet); /* Violet accent */
+}
+
+.highlight {
+  color: var(--primary); /* Portokalli */
 }
 
 .hero-content p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   margin-bottom: 2.5rem;
   max-width: 90%;
 }
@@ -237,35 +248,73 @@ a {
 }
 
 .stat-item h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--text);
+  font-weight: 600;
 }
 
 .stat-item p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   margin: 0;
 }
 
 .hero-image-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* FOTOJA BARDH E ZI DHE RUMBULLAKE */
 .hero-image {
-  border-radius: 24px;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%; /* Rumbullake */
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 4px solid var(--bg-card);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4), 0 0 0 1px var(--border);
+  position: relative;
+  z-index: 2;
 }
 
 .hero-image img {
   width: 100%;
-  display: block;
-  filter: grayscale(20%);
-  transition: filter 0.5s;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(1.1); /* Bardh e zi */
+  transition: filter 0.5s ease, transform 0.5s ease;
 }
 
 .hero-image:hover img {
   filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.hero-shape {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(40px);
+  opacity: 0.4;
+}
+
+.shape-1 {
+  width: 300px;
+  height: 300px;
+  background: var(--primary); /* Portokalli */
+  top: -20px;
+  right: -20px;
+}
+
+.shape-2 {
+  width: 250px;
+  height: 250px;
+  background: var(--violet); /* Violet */
+  bottom: -20px;
+  left: -20px;
 }
 
 /* Marquee */
@@ -275,20 +324,21 @@ a {
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   white-space: nowrap;
-  background: rgba(255,255,255,0.02);
+  background: var(--bg-card);
 }
 
 .marquee-track {
   display: inline-block;
   animation: marquee 20s linear infinite;
   font-family: monospace;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
+  letter-spacing: 0.05em;
 }
 
 .marquee-track .dot {
   margin: 0 2rem;
-  color: var(--primary);
+  color: var(--primary); /* Portokalli */
 }
 
 @keyframes marquee {
@@ -308,8 +358,8 @@ section {
 .section-label {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
+  gap: 0.5rem;
+  font-size: 0.85rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -323,14 +373,15 @@ section {
 .section-label.rose { color: var(--rose); }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .section-header p {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
+  max-width: 600px;
 }
 
 /* About */
@@ -343,40 +394,42 @@ section {
 .about-text p {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
 }
 
 .about-text strong {
   color: var(--text);
+  font-weight: 600;
 }
 
 .skill-category {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .skill-category h3 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text);
+  font-weight: 600;
 }
 
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.8rem;
 }
 
 .skill-tag {
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
   font-weight: 500;
   background: var(--bg-card);
   border: 1px solid var(--border);
 }
 
 .t-blue { color: var(--blue); border-color: rgba(59, 130, 246, 0.3); }
-.t-coral { color: var(--coral); border-color: rgba(244, 63, 94, 0.3); }
+.t-coral { color: var(--coral); border-color: rgba(249, 115, 22, 0.3); } /* Portokalli */
 .t-emerald { color: var(--emerald); border-color: rgba(16, 185, 129, 0.3); }
 .t-violet { color: var(--violet); border-color: rgba(139, 92, 246, 0.3); }
 
@@ -390,48 +443,54 @@ section {
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .timeline-item {
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   border-left: 1px solid var(--border);
 }
 
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -4.5px;
+  left: -5.5px;
   top: 0.3rem;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   background: var(--bg);
-  border: 2px solid var(--text-secondary);
+  border: 2px solid var(--primary); /* Portokalli bullet points */
   border-radius: 50%;
 }
 
 .timeline-date {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
-  display: block;
+  display: inline-block;
+  background: var(--bg-card);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
 }
 
 .timeline-item h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.2rem;
+  font-weight: 600;
 }
 
 .timeline-item h5 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  color: var(--text-secondary);
+  color: var(--violet); /* Violet company names */
   margin-bottom: 1rem;
 }
 
 .timeline-item p {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
 }
 
@@ -444,50 +503,52 @@ section {
 
 .filter-btn {
   background: transparent;
-  border: none;
+  border: 1px solid var(--border);
   color: var(--text-secondary);
   cursor: pointer;
-  font-size: 0.9rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+  font-size: 0.95rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
   transition: all 0.3s;
 }
 
 .filter-btn.active, .filter-btn:hover {
   background: var(--bg-card);
   color: var(--text);
+  border-color: var(--primary); /* Portokalli */
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
 }
 
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s;
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--border-focus);
+  transform: translateY(-10px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .project-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .project-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -500,52 +561,58 @@ section {
 .ic-rose { background: var(--rose-bg); color: var(--rose); }
 
 .project-category-badge {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.6rem;
-  border-radius: 12px;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
   border: 1px solid var(--border);
+  background: var(--bg);
 }
 
 .project-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .project-card p {
   color: var(--text-secondary);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-bottom: 1.5rem;
 }
 
 .project-tech {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
 }
 
 .project-tech span {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
-  font-family: monospace;
+  background: var(--bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
 }
 
 .project-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
-  font-size: 0.9rem;
+  gap: 0.4rem;
+  font-size: 0.95rem;
   color: var(--text);
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 .project-links a:hover {
-  text-decoration: underline;
+  color: var(--primary);
 }
 
 /* Footer */
 footer {
   border-top: 1px solid var(--border);
   padding: 6rem 0 3rem;
+  background: var(--bg-card);
 }
 
 .social-links {
@@ -555,10 +622,10 @@ footer {
 }
 
 .social-links a {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: var(--bg-card);
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,13 +635,15 @@ footer {
 }
 
 .social-links a:hover {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  transform: translateY(-3px);
 }
 
 .footer-copy {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
@@ -585,7 +654,7 @@ footer {
     gap: 3rem;
   }
   .hero-content h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
   .nav-links, .nav-actions {
     display: none;
@@ -598,8 +667,8 @@ footer {
 /* Reveal Animation */
 .reveal {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .reveal.active {
