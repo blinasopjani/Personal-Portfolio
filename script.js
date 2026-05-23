@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.style.position = 'absolute';
             navLinks.style.top = '100%';
             navLinks.style.right = '0';
-            navLinks.style.background = '#09090b';
+            navLinks.style.background = '#ffffff';
             navLinks.style.padding = '2rem';
             navLinks.style.border = '1px solid rgba(255,255,255,0.1)';
         });
