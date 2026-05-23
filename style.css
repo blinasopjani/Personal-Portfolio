@@ -324,7 +324,7 @@ a {
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   white-space: nowrap;
-  background: var(--bg-card);
+  background: linear-gradient(90deg, rgba(249,115,22,0.06), rgba(139,92,246,0.06), rgba(249,115,22,0.06));
 }
 
 .marquee-track {
@@ -349,6 +349,25 @@ a {
 /* Sections */
 section {
   padding: 8rem 0;
+}
+
+/* Colored section backgrounds */
+#about {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.04) 0%, rgba(249, 115, 22, 0.08) 100%);
+  border-top: 1px solid rgba(249, 115, 22, 0.1);
+  border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+#experience {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.04) 0%, rgba(139, 92, 246, 0.08) 100%);
+  border-top: 1px solid rgba(139, 92, 246, 0.1);
+  border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+}
+
+#education {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.04) 0%, rgba(59, 130, 246, 0.06) 100%);
+  border-top: 1px solid rgba(16, 185, 129, 0.1);
+  border-bottom: 1px solid rgba(16, 185, 129, 0.1);
 }
 
 .section-header {
