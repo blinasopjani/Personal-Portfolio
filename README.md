@@ -22,5 +22,6 @@ This project is a **Personal Portfolio Website** developed using modern web tech
 - Clean and modern user interface  
 - Animations and effects for a dynamic experience  
 
-
-
+## Deployment
+The portfolio is deployed and hosted on GitHub Pages. You can view it live at:  
+[https://blinasopjani.github.io/Personal-Portfolio/](https://blinasopjani.github.io/Personal-Portfolio/)
