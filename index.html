@@ -1,540 +1,553 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blina Sopjani | Software & AI Engineer</title>
+  <meta name="description"
+    content="Portfolio of Blina Sopjani – Junior AI Automation & Software Engineer based in Kosovo.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/feather-icons"></script>
 </head>
+
 <body>
-    <!--Header-->
-    <header class="main-header">
-        <nav class="navbar header-nav navbar-expand-lg">
-            <div class="container">
-                <!--Logo-->
-                <a href="#" class="navbar-brand">
-                    <h4 class="mb-0">
-                        Blina <span class="text-primary">Sopjani</span>
-                    </h4>
-                </a>
-                <!--Menu-->
-                <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
-                    <ul class="navbar-nav mx-auto">
-                        <li>
-                            <a href="#home" class="nav-link">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about" class="nav-link">About Me</a>
-                        </li>
-                        <li>
-                            <a href="#services" class="nav-link">Services</a>
-                        </li>
-                        <li>
-                            <a href="#skill" class="nav-link">Skills</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio" class="nav-link">Portfolio</a>
-                        </li>
-                    </ul>
-                </div>
-                <!--Button-->
-                <div class="ms-auto d-none d-lg-block">
-                    <a class="colored-btn" href="#contact">Contact Now</a>
-                </div>
-                <!--Mobile Menu Toggle-->
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
+  <div class="cursor-glow" id="cursor-glow"></div>
+  <canvas id="grain-canvas"></canvas>
 
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Blina<span> Sopjani</span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </div>
+      <div class="nav-actions">
+        <a href="CV.pdf" download class="btn btn-outline">Resume</a>
+        <a href="#contact" class="btn btn-primary">Let's Talk</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Main -->
-    <section>
-        <!-- Home -->
-        <section id="home" class="home-section bg-gray">
-        <div class="container">
-            <div class="anim-elements">
-                <div class="anim-element"><i class="bx bxl-java"></i></div>
-                <div class="anim-element"><i class='bx bxl-php'></i></div>
-                <div class="anim-element"><i class='bx bxl-python' ></i></div>
-                <div class="anim-element"><i class='bx bxl-react'></i></div>
-                <div class="anim-element"><i class='bx bxl-javascript'></i></div>
-            </div>
-            <div class="row gy-5 align-items-center">
-                <div class="col-lg-6">
-                    <div class="home-intro text-center text-lg-start">
-                        <h6>Hi, My name is Blina.</h6>
-                        <h1>I'm a <span id="type-it">Software Engineer</span></h1>
-                        <p>Based on Pristina, Kosovo.</p>
-                        <a href="#about" class="colored-btn mt-1">
-                            About me
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-6 pt-lg-8">
-                    <div class="home-image text-center">
-                        <img src="assets/img/banner.jpg" alt="">
-                    </div>
-
-                </div>
-
-            </div>
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <div class="availability-badge">
+          <span class="pulse-dot"></span>
+          Available for Opportunities
         </div>
-        </section>
 
-        <!-- About Section -->
-        <section id="about" class="section">
-            <div class="container">
-                <div class="row gy-5 align-items-center">
-                    <div class="col-lg-6 text-center">
-                        <img src="assets/img/aboutme.png" alt="">
-                    </div>
-                    <div class="col-lg-6 ps-lg-5">
-                        <div class="about-text">
-                            <h3 class="h1 mb-3 text-dark fw-semibold">Im a software engenier with 2 years experience</h3>
-                            <p>Experienced in full-stack web development, Java and C# applications, and AI solutions. I’ve worked on diverse projects, built intelligent systems, and collaborated with teams to deliver high-quality, client-focused software using modern technologies like React, Node.js, Python, and MySQL. I enjoy solving complex problems and turning innovative ideas into efficient, functional applications.</p>
-                            <div class="row pt-2">
-                                <div class="col-6 col-md-4">
-                                    <h5 class="text-primary fw-semibold fs-4 mb-0">30</h5>
-                                    <span class="text-dark">Projects completed</span>
-                                </div>
-                            </div>
-                            <div class="row pt-2">
-                                <div class="col-6 col-md-4">
-                                    <h5 class="text-primary fw-semibold fs-4 mb-0">5</h5>
-                                    <span class="text-dark">Happy Clients</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <h1>Engineering <span class="editorial-italic">intelligent</span> <span class="highlight">systems</span> &
+          scalable software.</h1>
+        <p>I am Blina Sopjani, AI Automation Engineer and Full-Stack Developer from Kosovo. I turn complex data into
+          production-ready models and build backend systems.</p>
 
-        <!-- Services -->
-        <section id="services" class="section bg-gray" style="background-image:url(assets/img/Orange.jpg); background-repeat:no-repeat; background-size:cover">
-            <div class="container">
-                <div class="section-heading">
-                    <h3>My services</h3>
-                </div>
-                <div class="row gy-5">
-                    <div class="col-md-6">
-                        <div class="feature-box bg-1">
-                            <div class="icon">
-                                <i class="bi bi-braces"></i>
-                            </div>
-                            <div class="content">
-                                <h5>Web Development & Design</h5>
-                                <p>I build modern, responsive, and user-friendly websites and web applications using HTML, CSS, Bootstrap, JavaScript, JQuery, React, and Node.js. I handle both front-end and back-end development, integrating databases like MySQL, to deliver complete full-stack solutions tailored to your needs.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i data-feather="briefcase" style="width:16px;height:16px;"></i> Explore Work
+          </a>
+          <a href="https://github.com/blinasopjani" target="_blank" class="btn btn-outline">
+            <i data-feather="github" style="width:16px;height:16px;"></i> GitHub
+          </a>
+          <a href="CV.pdf" download class="btn btn-outline">
+            <i data-feather="download" style="width:16px;height:16px;"></i> Resume
+          </a>
+        </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-box bg-2">
-                            <div class="icon">
-                                <i class="bi bi-filetype-java"></i>
-                            </div>
-                            <div class="content">
-                                <h5>Java & C# Software Development</h5>
-                                <p>I develop robust applications using Java and C#, applying best practices from my internships and advanced training. I specialize in building scalable, maintainable programs, debugging complex code, and optimizing software performance for both enterprise and personal projects.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-box bg-3">
-                            <div class="icon">
-                                <i class="bi bi-robot"></i>
-                            </div>
-                            <div class="content">
-                                <h5>AI & Data Solutions</h5>
-                                <p>With hands-on experience as an AI developer intern, I create intelligent solutions using Python and machine learning techniques. Services include data analysis, predictive modeling, and automation to help businesses make data-driven decisions and improve efficiency.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="feature-box bg-4">
-                            <div class="icon">
-                                <i class="bi bi-laptop"></i>
-                            </div>
-                            <div class="content">
-                                <h5>IT Tutoring & Training</h5>
-                                <p>I provide personalized tutoring in programming languages (Java, C#, Python, PHP), web technologies (React, Node.js, HTML/CSS), and software tools. I focus on practical skills, problem-solving, and understanding complex concepts to help students and professionals excel.</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-        <!--Skill Secrion -->
-        <section>
-            <div id="skill" class="section">
-                <div class="container">
-                    <div class="row gy-5">
-                        <div class="col-lg-6">
-                            <div class="section-heading text-start ">
-                                <h3>My Skills</h3>
-                            </div>
-                            <div class="skill-box">
-                                <div class="row g-3">
-                                    <div class=" col-6 col-md-4 col-lg-6">
-                                        <div class="feature-box  feature-box-small bg-1">
-                                            <div class="icon">
-                                                <i class="bi bi-filetype-java"></i>
-                                            </div>
-                                            <h6>Java & C# Programming</h6>
-                                        </div>
-                                    </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-2">
-                                                    <div class="icon">
-                                                        <i class="bi bi-braces"></i>
-                                                    </div>
-                                                    <h6>Web Development</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-3">
-                                                    <div class="icon">
-                                                        <i class="bx bxl-python"></i>
-                                                    </div><h6>Python</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-4">
-                                                    <div class="icon">
-                                                        <i class="bi bi-database"></i>
-                                                    </div>
-                                                        <h6>Database Management</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-2">
-                                                    <div class="icon">
-                                                        <i class='bx bx-git-repo-forked'></i>
-                                                    </div>
-                                                        <h6>Version Control</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-3">
-                                                    <div class="icon">
-                                                    <i class="bi bi-robot"></i>
-                                                    </div>
-                                                        <h6>Machine Learning</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-1">
-                                                    <div class="icon">
-                                                        <i class="bi bi-lightbulb"></i>
-                                                    </div>
-                                                        <h6>Problem Solving & Critical Thinking</h6>
-                                                </div>
-                                        </div>
-                                        <div class=" col-6 col-md-4 col-lg-6">
-                                                <div class="feature-box  feature-box-small bg-4">
-                                                    <div class="icon">
-                                                        <i class="bi bi-people"></i>
-                                                    </div>
-                                                        <h6>Teamwork & Communication</h6>
-                                                </div>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                                <div class="col-lg-6 text-center ">
-                                    <img src="assets/img/skills.png" alt="" style="margin-top: 60px;">
-                                </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Work -->
-        <section id="portfolio" class="section bg-gray">
-            <div class="container">
-                <div class="section-heading">
-                    <h3>Latest  Projects</h3>
-                </div>
-                <div class="portfolio-box">
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/P1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>Website design and development </span>
-                                <h4>Dyqani Online</h4>
-                                <p>This project involves the design and management of an online store for purchasing clothing, accessories, and shoes. The website is created to provide a smooth and user-friendly experience, with easy navigation, an intuitive shopping cart, and a secure checkout process. Through this project, I applied my skills in HTML, CSS, JavaScript, and database management to deliver a functional and visually appealing platform.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center flex-row-reverse">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/kpn.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>Artificial Intelligence & Machine Learning</span>
-                                <h4>KPN FTU Box Scanner App</h4>
-                                <p>During my internship at KPN, I contributed to the FTU Box Scanner App, a project designed to automate and optimize the scanning and tracking of boxes. The app leverages AI and machine learning to ensure accurate detection and classification, delivering a robust and efficient solution in collaboration with the team.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/Taxi.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>Website Design and Development</span>
-                                <h4>Flash Taxi</h4>
-                                <p>This project involved designing and developing the Flash Taxi website, a platform for ordering taxis quickly and efficiently. The website is user-friendly, with intuitive navigation, a clear booking process, and real-time updates for ride status. The project focused on creating a seamless experience for users while ensuring a reliable and functional platform.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center flex-row-reverse">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/ira.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>Website Design and Development</span>
-                                <h4>IRA Outdoor Management Dashboard</h4>
-                                <p>This project involved designing and developing the IRA Outdoor Management Dashboard, a platform for efficiently managing outdoor operations and resources. The dashboard provides real-time insights, intuitive controls, and organized data visualization to help users monitor and manage activities effectively. The focus was on delivering a functional, user-friendly, and visually appealing solution.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/siqa.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>Website Design and Development</span>
-                                <h4>Siqa Shop</h4>
-                                <p>TThis project involved designing and developing the Siqa Shop online store, a platform where users can find everything they need, from clothing and accessories to shoes and more. The website provides a smooth and user-friendly experience, with easy navigation, an intuitive shopping cart, and a secure checkout process. The focus was on creating a functional and visually appealing platform to enhance the online shopping experience.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row gx-3 gy-4 pb-3 mb-5 mb-lg-3 mb-lg-3 justify-content-around align-items-center flex-row-reverse">
-                        <div class="col-md-6 col-lg-5">
-                            <div class="potfolio-img">
-                                <img src="assets/img/RS.png" alt="">
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-5">
-                            <div class="portfolio-text">
-                                <span>CRUD Application</span>
-                                <h4>Student Registration System</h4>
-                                <p>This project involved developing a CRUD application for managing student registrations using C#. The system allows users to create, read, update, and delete student records, providing a simple and efficient way to manage student information. The focus was on delivering a functional, user-friendly, and reliable application for educational management.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Testimonial -->
-        <section class="cestion">
-            <div class="container">
-                <div class="section-heading">
-                    <h3 style="padding-top: 25px;">Testimonials</h3>
-                </div>
-                <div class="owl-carousel">
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="assets/img/testimonials.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Blina demonstrated exceptional technical skills and an impressive capacity to quickly learn and apply new AI concepts. Her dedication, problem-solving abilities, and teamwork made her a key contributor during her internship. She consistently delivered high-quality results and showed a genuine passion for technology and innovation.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">Eric Oostendorp</h6>
-                            <small>Internship Supervisor – KPN</small>
-                        </div>
-                    </div>
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="assets/img/testimonials.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Blina is an outstanding tutor with a talent for making complex technical concepts easy to understand. Her patience, communication skills, and enthusiasm inspired her students to achieve their best. She brings professionalism, creativity, and a collaborative mindset to every task she undertakes.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">Student Mentor & IT Tutor </h6>
-                            <small>NdreqiNotat.com</small>
-                        </div>
-                    </div>
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="assets/img/testimonials.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                            Blina quickly adapted to our fast-paced environment and contributed effectively to both web and Java development projects. Her technical knowledge, attention to detail, and proactive attitude set her apart. She is a motivated learner and a reliable team player, making her an asset to any organization.
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">Arb Abdyli </h6>
-                            <small>Founder & CEO Sharp Group LTD</small>
-                        </div>
-                    </div>
-                    
-                    <div class="feature-box mb-4">
-                        <div class="img">
-                            <img src="assets/img/testimonials.png" alt="">
-                        </div>
-                        <div class="content">
-                            <p class="mb-3">
-                                Blina has been instrumental in developing and maintaining our website at Siqa Shop. Her technical expertise, creativity, and attention to detail ensured that our platform is both functional and visually appealing. She is highly professional, responsive, and proactive, making her an invaluable partner in our digital growth
-                            </p>
-                            <h6 class="mb-0 text-dark fw-semibold">Fitim Sopjani</h6>
-                            <small>CEO & Founder of Siqa Shop</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact -->
-        <section id="contact" class="section bg-dark">
-            <div class="container">
-                <div class="row gy-5">
-                    <div class="col-lg-6">
-                        <div class="contact-form">
-                            <h2 class="text-dark">
-                                Get in touch
-                            </h2>
-                            <p class="lead">Let’s create something together! Drop me a message and I’ll get back to you soon.</p>
-                            <form id="contactForm">
-                                <div class="row gy-4 gx-3">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <label class="form-label">Name</label>
-                                                <input type="text" class="form-control" name="name" required>
-                                        </div>
-                                    </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Email</label>
-                                        <input type="email" class="form-control" name="email" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Subject</label>
-                                        <input type="text" class="form-control" name="subject" required>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <label class="form-label">Message</label>
-                                        <textarea name="message" rows="3" class="form-control" required></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="colored-btn" type="submit">Send Message</button>
-                                </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 ms-auto col-xl-4">
-                        <div class="pb-5 d-none d-md-block">
-                            <img src="assets/img/Contact.png" class="contact-img" alt="">
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>4</h4>
+            <p>Internships</p>
+          </div>
+          <div class="stat-item">
+            <h4>17</h4>
+            <p>Repositories</p>
+          </div>
+          <div class="stat-item">
+            <h4>2</h4>
+            <p>Universities</p>
+          </div>
+        </div>
+      </div>
 
-                        </div>
-                        <ul class="contact-infos">
-                            <li>
-                                <div class="icon bg-1">
-                                    <i class="bx bx-phone"></i>
-                                </div>
-                                <div class="col ps-3">
-                                    <h5>Phone</h5>
-                                    <p>Available upon request</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icon bg-2">
-                                    <i class="bx bx-envelope"></i>
-                                </div>
-                                <div class="col ps-3">
-                                    <h5>Mail</h5>
-                                    <p>blina.sopjani@gmail.com</p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="icon bg-3">
-                                    <i class="bx bx-map"></i>
-                                </div>
-                                <div class="col ps-3">
-                                    <h5>Visit my Office</h5>
-                                    <p>Pristina, Kosovo</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6 py-2">
-                        <div class="nav justify-content-center justify-content-md-start">
-                            <div class="social-links">
-                            <a href="https://www.linkedin.com/in/blina-sopjani/"target="_blank"><i class="bx bxl-linkedin"></i></a>
-                            <a href="https://github.com/blinasopjani"target="_blank"><i class="bx bxl-github"></i></a>
-                            <a href="https://www.facebook.com/blina.sopjani.2025/"target="_blank"><i class="bx bxl-facebook"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 py-2 text-center text-md-end">
-                            <p class="m-0">
-                                2025 Copyright all right reserved | Developed By <a href="#">Blina Sopjani</a>
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-image">
+          <img src="BS.jpg" alt="Blina Sopjani"
+            onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'">
+        </div>
+        <div class="hero-shape shape-1"></div>
+        <div class="hero-shape shape-2"></div>
+      </div>
+    </div>
+  </section>
 
-    </main>
+  <!-- Marquee -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>Machine Learning</span><span class="dot">·</span>
+      <span>Computer Vision</span><span class="dot">·</span>
+      <span>YOLO</span><span class="dot">·</span>
+      <span>Java Spring Boot</span><span class="dot">·</span>
+      <span>NLP</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>PostgreSQL</span><span class="dot">·</span>
+      <span>React Native</span><span class="dot">·</span>
+      <span>Power BI</span><span class="dot">·</span>
+      <span>C# .NET</span><span class="dot">·</span>
+      <span>Machine Learning</span><span class="dot">·</span>
+      <span>Computer Vision</span><span class="dot">·</span>
+      <span>YOLO</span><span class="dot">·</span>
+      <span>Java Spring Boot</span><span class="dot">·</span>
+      <span>NLP</span><span class="dot">·</span>
+      <span>Python</span><span class="dot">·</span>
+      <span>PostgreSQL</span><span class="dot">·</span>
+      <span>React Native</span><span class="dot">·</span>
+      <span>Power BI</span><span class="dot">·</span>
+      <span>C# .NET</span><span class="dot">·</span>
+    </div>
+  </div>
 
-    <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    
+  <!-- About & Skills -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label coral"><i data-feather="user" style="width:12px;height:12px;"></i> About Me</span>
+        <h2>A hybrid engineer bridging <span class="editorial-italic">AI</span> and <span
+            class="editorial-italic">Software</span></h2>
+        <p>Combining deep learning expertise with full-stack engineering to deliver end-to-end intelligent systems.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>Based in Pristina, Kosovo, I hold a <strong>BSc in Computer Science</strong> from Universum International
+            College, enriched by an <strong>Erasmus exchange</strong> in Big Data & AI at Inholland University in the
+            Netherlands.</p>
+          <p>During my internship at <strong>KPN</strong>, I built a YOLO-based computer vision system that
+            automated fiber optic hardware inspections replacing costly manual processes. <br> At <strong>Tectigon
+              LLC</strong>, I engineered Python pipelines for predictive analytics and executive reporting.</p>
+          <p>My strength is versatility: from training deep learning models (<strong>ResNet, SVM, Random
+              Forest</strong>) to architecting secure Java Spring Boot backends with PostgreSQL, I deliver
+            production-grade solutions.</p>
+        </div>
+
+        <div class="skills-container reveal">
+          <div class="skill-category cat-ai">
+            <h3>AI & Data Science</h3>
+            <div class="skill-tags">
+              <span class="skill-tag t-blue">Machine Learning</span>
+              <span class="skill-tag t-blue">Computer Vision</span>
+              <span class="skill-tag t-violet">YOLO</span>
+              <span class="skill-tag t-blue">NLP</span>
+              <span class="skill-tag t-emerald">Pandas / NumPy</span>
+              <span class="skill-tag t-emerald">Scikit-learn</span>
+              <span class="skill-tag t-violet">Power BI</span>
+            </div>
+          </div>
+
+          <div class="skill-category cat-dev">
+            <h3>Software Engineering</h3>
+            <div class="skill-tags">
+              <span class="skill-tag t-coral">Python</span>
+              <span class="skill-tag t-coral">Java (Spring Boot)</span>
+              <span class="skill-tag t-violet">C# (.NET)</span>
+              <span class="skill-tag t-blue">JavaScript</span>
+              <span class="skill-tag t-emerald">PostgreSQL</span>
+              <span class="skill-tag t-coral">React Native</span>
+              <span class="skill-tag t-violet">Git / CI-CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label blue"><i data-feather="briefcase" style="width:12px;height:12px;"></i>
+          Experience</span>
+        <h2>Professional <span class="editorial-italic">Journey</span></h2>
+        <p>Real-world impact across AI, data science, and full-stack development.</p>
+      </div>
+
+      <div class="resume-grid">
+        <div class="reveal">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2025 – Present</span>
+              <h4>Project Manager</h4>
+              <h5>Siqa Store · Remote</h5>
+              <p>Managing project lifecycles, coordinating remote team operations, and overseeing strategic planning.</p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Feb 2026 – Apr 2026</span>
+              <h4>Python & Data Science Intern</h4>
+              <h5>Tectigon LLC · Pristina, Kosovo</h5>
+              <p>Automated data extraction workflows and built predictive ML models for trend forecasting. Designed
+                executive reports using Power BI.</p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Jan 2025 – Jun 2025</span>
+              <h4>AI Developer Intern</h4>
+              <h5>KPN Telecom · Netherlands</h5>
+              <p>Developed an automated FTU installation validation system using YOLO object detection, drastically
+                reducing manual inspection overhead.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="timeline">
+            <div class="timeline-item">
+              <span class="timeline-date">Sep 2024 – Sep 2025</span>
+              <h4>IT Instructor</h4>
+              <h5>NdreqiNotat.com</h5>
+              <p>Taught programming fundamentals, algorithms, and logical problem-solving, reinforcing clean coding
+                practices across student cohorts.</p>
+            </div>
+
+            <div class="timeline-item">
+              <span class="timeline-date">Oct 2023 – Nov 2023</span>
+              <h4>Java & Web Developer Intern</h4>
+              <h5>Sharp Group LTD</h5>
+              <p>Built backend Java applications and web interfaces integrating frontend HTML/JS with database endpoints
+                for client projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label violet"><i data-feather="code" style="width:12px;height:12px;"></i> Projects</span>
+        <h2>Engineering <span class="editorial-italic">Portfolio</span></h2>
+        <p>A curated selection of live repositories spanning AI, software, and data analysis.</p>
+      </div>
+
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="ai">AI & ML</button>
+        <button class="filter-btn" data-filter="software">Software</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon ic-blue"><i data-feather="eye"></i></div>
+            <span class="project-category-badge b-ai">AI / CV</span>
+          </div>
+          <h3>FTU Validation System</h3>
+          <p>Production computer vision system built at KPN using YOLO to automatically validate fiber optic hardware
+            installations in the field.</p>
+          <div class="project-tech">
+            <span>Python</span><span>YOLO</span><span>OpenCV</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani" target="_blank">View details <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon ic-rose"><i data-feather="activity"></i></div>
+            <span class="project-category-badge b-ai">AI / Medical</span>
+          </div>
+          <h3>RSNA Brain Aneurysm Detection</h3>
+          <p>Deep learning pipeline classifying intracranial aneurysms from CTA brain scan sequences using convolutional
+            neural networks.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Deep Learning</span><span>Medical AI</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/RSNA-Aneurysm" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-coral"><i data-feather="server"></i></div>
+            <span class="project-category-badge b-sw">Backend</span>
+          </div>
+          <h3>UniFLIX Streaming API</h3>
+          <p>Secure enterprise backend for a streaming platform built with Java Spring Boot, Hibernate ORM, and
+            PostgreSQL.</p>
+          <div class="project-tech">
+            <span>Java</span><span>Spring Boot</span><span>PostgreSQL</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/uniflix-movie-api" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon ic-violet"><i data-feather="trending-down"></i></div>
+            <span class="project-category-badge b-ai">ML / API</span>
+          </div>
+          <h3>Dropout Prediction API</h3>
+          <p>Random Forest classifier scoring academic profiles to predict student dropout risk, deployed as a
+            lightweight REST endpoint.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Random Forest</span><span>API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Student-Dropout-Prediction" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon ic-emerald"><i data-feather="move"></i></div>
+            <span class="project-category-badge b-ai">AI / CV</span>
+          </div>
+          <h3>Hand Gesture Recognition</h3>
+          <p>Real-time skeleton tracking using MediaPipe and SVM classifiers to translate finger gestures into system
+            commands.</p>
+          <div class="project-tech">
+            <span>Python</span><span>OpenCV</span><span>SVM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/rps-hand-gesture-recognition" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-coral"><i data-feather="smartphone"></i></div>
+            <span class="project-category-badge b-sw">Mobile</span>
+          </div>
+          <h3>EcoMind AI App</h3>
+          <p>React Native mobile app integrating utility tracking and predictive projections for household energy
+            optimization.</p>
+          <div class="project-tech">
+            <span>JavaScript</span><span>React Native</span><span>Expo</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/EcoMind-AI" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="ai">
+          <div class="project-card-header">
+            <div class="project-icon ic-blue"><i data-feather="file-text"></i></div>
+            <span class="project-category-badge b-ai">NLP</span>
+          </div>
+          <h3>AI Text Classification</h3>
+          <p>NLP pipeline using TF-IDF vectorization and Logistic Regression to automatically categorize unstructured
+            documents.</p>
+          <div class="project-tech">
+            <span>Python</span><span>NLP</span><span>TF-IDF</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/ai_text_classification" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="data">
+          <div class="project-card-header">
+            <div class="project-icon ic-emerald"><i data-feather="bar-chart-2"></i></div>
+            <span class="project-category-badge b-da">Analytics</span>
+          </div>
+          <h3>Candy Sales Analytics</h3>
+          <p>Data analysis notebook extracting business intelligence and sales forecasting insights using Pandas and
+            visual libraries.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Pandas</span><span>Jupyter</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Candy-Sales-Data-Analysis" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="reveal" style="text-align:center; margin-top:3rem;">
+        <a href="https://github.com/blinasopjani" target="_blank" class="btn btn-outline">
+          <i data-feather="github" style="width:16px;height:16px;"></i> View All 17 Repositories
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Certifications -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label emerald"><i data-feather="book-open" style="width:12px;height:12px;"></i> Education &
+          Certifications</span>
+        <h2>Academic <span class="editorial-italic">Background</span></h2>
+        <p>Formal education and specialized industry training.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 class="edu-header h-blue"><i data-feather="book-open"></i> Degrees</h3>
+        <div class="resume-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 3rem;">
+          <div class="timeline">
+            <div class="timeline-item" style="margin-bottom: 0;">
+              <span class="timeline-date">Oct 2023 – Jun 2026</span>
+              <h4>BSc Computer Science</h4>
+              <h5>Universum International College · Kosovo</h5>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item" style="margin-bottom: 0;">
+              <span class="timeline-date">Jan 2025 – Jun 2025</span>
+              <h4>Big Data & AI (Erasmus)</h4>
+              <h5>Inholland University · Netherlands</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <h3 class="edu-header h-coral"><i data-feather="award"></i> Certifications & Training</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem;">
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">May 2026 – Present</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Data Science Bootcamp</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Makerspace Innovation Center
+              Prizren</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Feb 2026</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Python & Data Science</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Tectigon Academy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Jan 2025</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">C# Advanced</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Udemy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Sep 2024</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Full Stack Bootcamp</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Coders' Hub</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Mar – Jun 2024</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Intersection of Tech, Innovation &
+              Entrepreneurship</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Universum International
+              College</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Jan – Apr 2024</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">ERP Business Solutions (SAP)</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Synergy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Feb 2024</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Digital Transformation Master
+              Classes</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Women in Tech Kosovo</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Dec 2023</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">ASU Certificate of Innovation</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Cintana Education</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Nov 2023</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Design Thinking</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Thomas More University</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Jun – Jul 2023</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Java Advanced & Basic</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ROI Academy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Sep – Nov 2022</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Techstitution Programme</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Beetroot Academy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Sep 2022</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Web Development</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ProbitAcademy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Jun 2022</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">HTML & CSS</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ProbitAcademy</p>
+          </div>
+
+          <div class="project-card" style="padding: 1.25rem;">
+            <span class="timeline-date">Jul 2019</span>
+            <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.2rem;">Excel 2016 Program</h4>
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">INFORMATIKA</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container reveal">
+      <div class="section-header" style="text-align:center; margin: 0 auto;">
+        <span class="section-label rose"><i data-feather="send" style="width:12px;height:12px;"></i> Contact</span>
+        <h2>Let's <span class="editorial-italic">Connect</span></h2>
+        <p style="margin:0 auto;">Open to discussing opportunities, collaborations, or technical challenges.</p>
+      </div>
+
+      <div class="social-links" style="margin-top:2.5rem;">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=blina.sopjani@gmail.com" target="_blank" title="Email"><i
+            data-feather="mail"></i></a>
+        <a href="https://www.linkedin.com/in/blina-sopjani/" target="_blank" title="LinkedIn"><i
+            data-feather="linkedin"></i></a>
+        <a href="https://github.com/blinasopjani" target="_blank" title="GitHub"><i data-feather="github"></i></a>
+      </div>
+
+      <div style="text-align:center; margin-top:2rem;">
+        <a href="CV.pdf" download class="btn btn-primary">
+          <i data-feather="download" style="width:14px;height:14px;"></i> Download Resume
+        </a>
+      </div>
+
+      <p class="footer-copy" style="margin-top:4rem;">© 2026 Blina Sopjani · Built with purpose.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-<script src="assets/js/script.js"></script>
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-(function(){
-emailjs.init("kiCBl07rmFRa2lGFV");
-})();
-</script>
-
-
