@@ -30,7 +30,4 @@ A fully redesigned personal portfolio website built from scratch with vanilla HT
 - **Education & Certifications** – 2 degrees + 14 certifications
 - **Contact/Footer** – Email, LinkedIn, GitHub links + CV download
 
-## Deployment
-The portfolio is deployed and hosted on **GitHub Pages** from the `gh-pages` branch.
 
-🔗 [https://blinasopjani.github.io/Personal-Portfolio/](https://blinasopjani.github.io/Personal-Portfolio/)
