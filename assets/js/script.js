@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Project Filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
+    const groupLabels = document.querySelectorAll('.project-group-label');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -64,6 +65,10 @@ document.addEventListener('DOMContentLoaded', () => {
                         card.style.display = 'none';
                     }, 300);
                 }
+            });
+
+            groupLabels.forEach(label => {
+                label.style.display = (filter === 'all' || label.getAttribute('data-group') === filter) ? 'block' : 'none';
             });
         });
     });
