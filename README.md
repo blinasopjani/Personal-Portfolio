@@ -5,7 +5,7 @@
 ---
 
 ## Overview
-A fully redesigned personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. The site presents Blina Sopjani as a **Junior AI Automation & Software Engineer** from Kosovo, showcasing professional experience, projects, education, and certifications in a clean, modern light-mode design.
+A fully redesigned personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. The site presents Blina Sopjani as a **Data Analyst & AI Enthusiast** from Kosovo, showcasing professional experience, projects, education, and certifications in a clean, modern light-mode design.
 
 ## Design
 - **Light mode** with a neutral white/off-white base
@@ -23,10 +23,10 @@ A fully redesigned personal portfolio website built from scratch with vanilla HT
 - **Google Fonts (Inter)** – Modern typography
 
 ## Sections
-- **Hero** – Intro, stats (4 internships, 17 repos, 2 universities), photo
+- **Hero** – Intro, stats (4 internships, 21 repos, 2 universities), photo
 - **About** – Bio text and categorized skill tags (AI & Data Science / Software Engineering)
-- **Experience** – Timeline of 5 professional roles including KPN, Tectigon LLC, Siqa Store
-- **Projects** – Filterable grid of 8 projects (AI/ML, Software, Data)
+- **Experience** – Timeline of 7 professional roles including Tax Administration of Kosovo (TAK), KPN, Tectigon LLC, Siqa Store
+- **Projects** – Filterable grid of 12 projects (AI/ML, Software, Data)
 - **Education & Certifications** – 2 degrees + 14 certifications
 - **Contact/Footer** – Email, LinkedIn, GitHub links + CV download
 
