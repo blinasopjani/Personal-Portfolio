@@ -5,11 +5,11 @@
 ---
 
 ## Overview
-A fully redesigned personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. The site presents Blina Sopjani as a **Data Analyst & AI Enthusiast** from Kosovo, showcasing professional experience, projects, education, and certifications in a clean, modern light-mode design.
+A personal portfolio website built from scratch with vanilla HTML, CSS, and JavaScript. The site presents Blina Sopjani as a **Data Analyst & AI** professional from Kosovo, showcasing professional experience, projects, education, and certifications in a clean, modern light-mode design.
 
 ## Design
 - **Light mode** with a neutral white/off-white base
-- **Orange** (`#f97316`) and **Violet** (`#8b5cf6`) accent colors throughout
+- **Orange** (`#f97316`) and **Rose** (`#f43f5e`) and **Violet** (`#8b5cf6`) accent colors
 - **Circular black & white hero photo** that reveals color on hover
 - Colored section backgrounds: About (orange tint), Experience (violet tint), Education (emerald tint)
 - Animated marquee skills strip, cursor glow, and grain texture overlay
@@ -24,10 +24,20 @@ A fully redesigned personal portfolio website built from scratch with vanilla HT
 
 ## Sections
 - **Hero** – Intro, stats (4 internships, 21 repos, 2 universities), photo
-- **About** – Bio text and categorized skill tags (AI & Data Science / Software Engineering)
-- **Experience** – Timeline of 7 professional roles including Tax Administration of Kosovo (TAK), KPN, Tectigon LLC, Siqa Store
-- **Projects** – Filterable grid of 12 projects (AI/ML, Software, Data)
-- **Education & Certifications** – 2 degrees + 14 certifications
-- **Contact/Footer** – Email, LinkedIn, GitHub links + CV download
+- **About** – Bio and categorized skill tags (AI & Data Science / Software Engineering)
+- **Projects** – Filterable grid of projects grouped by theme (AI/ML, Software, Data), with category labels
+- **Experience** – Timeline of professional roles including Tax Administration of Kosovo (TAK), KPN, Tectigon LLC, Siqa Store, and NdreqiNotat.com
+- **Education & Certifications** – 2 degrees + certifications grouped by theme (Data & AI, Software, Design & Business, Foundations)
+- **Contact / Footer** – Email, LinkedIn, GitHub links + CV download
 
-
+## Project Structure
+```
+├── index.html          # Main page
+├── assets/
+│   ├── css/style.css   # All styles
+│   ├── js/script.js    # Interactions & animations
+│   └── img/BS.jpg      # Profile photo
+├── files/
+│   └── CV.pdf          # Downloadable resume
+└── README.md
+```
