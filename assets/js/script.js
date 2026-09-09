@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Feather Icons
-    feather.replace();
+    try { feather.replace(); } catch (e) { console.warn('Feather icons unavailable'); }
 
     // Custom Cursor
     const cursorGlow = document.getElementById('cursor-glow');
@@ -70,6 +70,16 @@ document.addEventListener('DOMContentLoaded', () => {
             groupLabels.forEach(label => {
                 label.style.display = (filter === 'all' || label.getAttribute('data-group') === filter) ? 'block' : 'none';
             });
+        });
+    });
+
+    // Project Carousels
+    document.querySelectorAll('.car-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const track = btn.closest('.cat-block').querySelector('.carousel-track');
+            const card = track.querySelector('.project-card');
+            const amount = card ? card.offsetWidth + 20 : 330;
+            track.scrollBy({ left: parseInt(btn.dataset.dir) * amount, behavior: 'smooth' });
         });
     });
 

@@ -7,7 +7,7 @@
   <title>Blina Sopjani | Data Analyst & AI</title>
   <meta name="description"
     content="Portfolio of Blina Sopjani – Data Analyst & AI Enthusiast based in Kosovo.">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
@@ -132,7 +132,7 @@
         <div class="about-text reveal">
           <p>Based in Pristina, Kosovo, I graduated with a <strong>BSc in Computer Science</strong> from Universum
             International College, as the top-GPA student in my program, enriched by an <strong>Erasmus exchange</strong>
-            in Big Data & AI at Inholland University in the Netherlands.</p>
+            in Big Data & AI at Inholland University in the Netherlands, and I am now pursuing an <strong>MSc in Data Science</strong> at Universum.</p>
           <p>I currently work as a <strong>Data Analyst intern at the Tax Administration of Kosovo (TAK)</strong>,
             turning institutional data into reports and insights. Earlier, during my internship at <strong>KPN</strong> in
             the Netherlands, I built a YOLO-based computer vision system that automated fiber optic hardware inspections,
@@ -187,17 +187,17 @@
         <p>A curated selection of live repositories spanning data analytics, machine learning, and software.</p>
       </div>
 
-      <div class="projects-filter reveal">
-        <button class="filter-btn active" data-filter="all">All Work</button>
-        <button class="filter-btn" data-filter="ai">AI & ML</button>
-        <button class="filter-btn" data-filter="software">Software</button>
-        <button class="filter-btn" data-filter="data">Data</button>
-      </div>
+      <div class="projects-carousels">
 
-      <div class="projects-grid" id="projects-grid">
-
-        <div class="project-group-label" data-group="data" style="grid-column:1 / -1; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--primary); margin:0.25rem 0 -0.5rem;">Data & Analytics</div>
-
+        <div class="cat-block">
+          <div class="cat-head">
+            <span class="cat-label" style="color:var(--primary);">Data & Analytics</span>
+            <div class="cat-arrows">
+              <button class="car-btn" data-dir="-1" aria-label="Previous">&#8249;</button>
+              <button class="car-btn" data-dir="1" aria-label="Next">&#8250;</button>
+            </div>
+          </div>
+          <div class="carousel-track">
         <div class="project-card reveal" data-category="data">
           <div class="project-card-header">
             <div class="project-icon ic-coral"><i data-feather="pie-chart"></i></div>
@@ -214,7 +214,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="data">
           <div class="project-card-header">
             <div class="project-icon ic-blue"><i data-feather="shopping-cart"></i></div>
@@ -231,7 +230,21 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
+        <div class="project-card reveal" data-category="data">
+          <div class="project-card-header">
+            <div class="project-icon ic-emerald"><i data-feather="bar-chart-2"></i></div>
+            <span class="project-category-badge b-da">EDA</span>
+          </div>
+          <h3>Online Retail II EDA</h3>
+          <p>Exploratory analysis of the UCI Online Retail II dataset: data cleaning, sales trends, and customer behavior across 2009 to 2011 transactions.</p>
+          <div class="project-tech">
+            <span>Python</span><span>Pandas</span><span>Jupyter</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Online-Retail-II-Exploratory-Data-Analysis" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
         <div class="project-card reveal" data-category="data">
           <div class="project-card-header">
             <div class="project-icon ic-emerald"><i data-feather="globe"></i></div>
@@ -248,7 +261,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="data">
           <div class="project-card-header">
             <div class="project-icon ic-violet"><i data-feather="map"></i></div>
@@ -265,7 +277,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="data">
           <div class="project-card-header">
             <div class="project-icon ic-emerald"><i data-feather="bar-chart-2"></i></div>
@@ -282,9 +293,18 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
+          </div>
+        </div>
 
-        <div class="project-group-label" data-group="ai" style="grid-column:1 / -1; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--blue); margin:1.75rem 0 -0.5rem;">AI & Machine Learning</div>
-
+        <div class="cat-block">
+          <div class="cat-head">
+            <span class="cat-label" style="color:var(--blue);">AI & Machine Learning</span>
+            <div class="cat-arrows">
+              <button class="car-btn" data-dir="-1" aria-label="Previous">&#8249;</button>
+              <button class="car-btn" data-dir="1" aria-label="Next">&#8250;</button>
+            </div>
+          </div>
+          <div class="carousel-track">
         <div class="project-card reveal" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon ic-blue"><i data-feather="eye"></i></div>
@@ -301,7 +321,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon ic-rose"><i data-feather="activity"></i></div>
@@ -318,7 +337,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon ic-violet"><i data-feather="trending-down"></i></div>
@@ -335,7 +353,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon ic-emerald"><i data-feather="move"></i></div>
@@ -352,7 +369,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="ai">
           <div class="project-card-header">
             <div class="project-icon ic-blue"><i data-feather="file-text"></i></div>
@@ -369,9 +385,18 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
+          </div>
+        </div>
 
-        <div class="project-group-label" data-group="software" style="grid-column:1 / -1; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--violet); margin:1.75rem 0 -0.5rem;">Software Engineering</div>
-
+        <div class="cat-block">
+          <div class="cat-head">
+            <span class="cat-label" style="color:var(--violet);">Software Engineering</span>
+            <div class="cat-arrows">
+              <button class="car-btn" data-dir="-1" aria-label="Previous">&#8249;</button>
+              <button class="car-btn" data-dir="1" aria-label="Next">&#8250;</button>
+            </div>
+          </div>
+          <div class="carousel-track">
         <div class="project-card reveal" data-category="software">
           <div class="project-card-header">
             <div class="project-icon ic-coral"><i data-feather="server"></i></div>
@@ -388,7 +413,6 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
         <div class="project-card reveal" data-category="software">
           <div class="project-card-header">
             <div class="project-icon ic-coral"><i data-feather="smartphone"></i></div>
@@ -405,7 +429,158 @@
                 data-feather="arrow-up-right"></i></a>
           </div>
         </div>
-
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-coral"><i data-feather="credit-card"></i></div>
+            <span class="project-category-badge b-sw">Java</span>
+          </div>
+          <h3>Bank System</h3>
+          <p>Console banking system in Java with account management, deposits, withdrawals, and balance tracking.</p>
+          <div class="project-tech">
+            <span>Java</span><span>OOP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Bank-System" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-violet"><i data-feather="file-text"></i></div>
+            <span class="project-category-badge b-sw">Tool</span>
+          </div>
+          <h3>Digital CV</h3>
+          <p>Python project that generates a digital CV from structured data.</p>
+          <div class="project-tech">
+            <span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/digita_cv" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-blue"><i data-feather="git-branch"></i></div>
+            <span class="project-category-badge b-sw">Algorithms</span>
+          </div>
+          <h3>Knight's Tour (BFS &amp; DFS)</h3>
+          <p>Chessboard knight pathfinding implemented with breadth-first and depth-first search in C#.</p>
+          <div class="project-tech">
+            <span>C#</span><span>BFS / DFS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Kalorsi-ne-Shah-BFS-dhe-DFS" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-blue"><i data-feather="user"></i></div>
+            <span class="project-category-badge b-sw">C#</span>
+          </div>
+          <h3>Person Data Reader</h3>
+          <p>C# application that reads, parses, and processes person records from structured input.</p>
+          <div class="project-tech">
+            <span>C#</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Person_Data_Reader" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-emerald"><i data-feather="dollar-sign"></i></div>
+            <span class="project-category-badge b-sw">C#</span>
+          </div>
+          <h3>Payroll Mini-Project</h3>
+          <p>C# mini-project that calculates employee salaries and payroll figures.</p>
+          <div class="project-tech">
+            <span>C#</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Mini-project-Paga" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-blue"><i data-feather="grid"></i></div>
+            <span class="project-category-badge b-sw">Tool</span>
+          </div>
+          <h3>QR Code Generator</h3>
+          <p>Python tool that generates custom QR codes from text or URLs.</p>
+          <div class="project-tech">
+            <span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/QRcode-python" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-coral"><i data-feather="hash"></i></div>
+            <span class="project-category-badge b-sw">Tool</span>
+          </div>
+          <h3>Python Calculator</h3>
+          <p>Calculator application in Python covering the core arithmetic operations.</p>
+          <div class="project-tech">
+            <span>Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Calculator-in-Python" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-coral"><i data-feather="navigation"></i></div>
+            <span class="project-category-badge b-sw">Web</span>
+          </div>
+          <h3>Flash Taxi</h3>
+          <p>Responsive taxi-service landing page built with HTML and CSS.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Flash-Taxi-" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-emerald"><i data-feather="compass"></i></div>
+            <span class="project-category-badge b-sw">Web</span>
+          </div>
+          <h3>IraOutDoors</h3>
+          <p>Outdoor-themed website built with HTML and CSS.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/IraOutDoors" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" data-category="software">
+          <div class="project-card-header">
+            <div class="project-icon ic-violet"><i data-feather="layout"></i></div>
+            <span class="project-category-badge b-sw">Web</span>
+          </div>
+          <h3>Personal Portfolio</h3>
+          <p>This portfolio site, built from scratch with vanilla HTML, CSS, and JavaScript.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/blinasopjani/Personal-Portfolio" target="_blank">View repository <i
+                data-feather="arrow-up-right"></i></a>
+          </div>
+        </div>
+          </div>
+        </div>
       </div>
 
       <div class="reveal" style="text-align:center; margin-top:3rem;">
@@ -507,6 +682,13 @@
         <div class="resume-grid" style="grid-template-columns: 1fr 1fr; margin-bottom: 3rem;">
           <div class="timeline">
             <div class="timeline-item" style="margin-bottom: 0;">
+              <span class="timeline-date">Oct 2026 – Present</span>
+              <h4>MSc Data Science</h4>
+              <h5>Universum International College · Kosovo</h5>
+            </div>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item" style="margin-bottom: 0;">
               <span class="timeline-date">Oct 2023 – Jun 2026</span>
               <h4>BSc Computer Science</h4>
               <h5>Universum International College · Kosovo</h5>
@@ -524,99 +706,79 @@
 
       <div class="reveal">
         <h3 class="edu-header h-coral"><i data-feather="award"></i> Certifications & Training</h3>
-        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--primary); font-weight:700; margin:1.5rem 0 1rem;">Data & AI</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">May 2026 – Present</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Data Science Bootcamp</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Makerspace Innovation Center Prizren</p>
+        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--primary); margin:1.25rem 0 0.5rem;">Data & AI</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); column-gap:2rem; row-gap:0.45rem;">
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">AI4Youth</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Empowering the Next Generation through AI Literacy and Agentic Innovation &middot; Sep 2026</div>
           </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Feb 2026</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Python & Data Science</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Tectigon Academy</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Data Science Bootcamp</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Makerspace Innovation Center Prizren &middot; May 2026 – Aug 2026</div>
           </div>
-        </div>
-
-        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--blue); font-weight:700; margin:2.5rem 0 1rem;">Software Engineering</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Jan 2025</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">C# Advanced</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Udemy</p>
-          </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Sep 2024</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Full Stack Bootcamp</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Coders' Hub</p>
-          </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Jun – Jul 2023</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Java Advanced & Basic</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ROI Academy</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Python & Data Science</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Tectigon Academy &middot; Feb 2026</div>
           </div>
         </div>
 
-        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--violet); font-weight:700; margin:2.5rem 0 1rem;">Design, Innovation & Business</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Mar – Jun 2024</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Intersection of Tech, Innovation & Entrepreneurship</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Universum International College</p>
+        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--blue); margin:2rem 0 0.5rem;">Software Engineering</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); column-gap:2rem; row-gap:0.45rem;">
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">C# Advanced</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Udemy &middot; Jan 2025</div>
           </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Jan – Apr 2024</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">ERP Business Solutions (SAP)</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Synergy</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Full Stack Bootcamp</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Coders' Hub &middot; Sep 2024</div>
           </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Feb 2024</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Digital Transformation Master Classes</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Women in Tech Kosovo</p>
-          </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Dec 2023</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">ASU Certificate of Innovation</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Cintana Education</p>
-          </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Nov 2023</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Design Thinking</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Thomas More University</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Java Advanced & Basic</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">ROI Academy &middot; Jun – Jul 2023</div>
           </div>
         </div>
 
-        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; color:var(--emerald); font-weight:700; margin:2.5rem 0 1rem;">Foundations</h4>
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem;">
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Sep – Nov 2022</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Techstitution Programme</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">Beetroot Academy</p>
+        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--violet); margin:2rem 0 0.5rem;">Design, Innovation & Business</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); column-gap:2rem; row-gap:0.45rem;">
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Intersection of Tech, Innovation & Entrepreneurship</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Universum International College &middot; Mar – Jun 2024</div>
           </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Sep 2022</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Web Development</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ProbitAcademy</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">ERP Business Solutions (SAP)</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Synergy &middot; Jan – Apr 2024</div>
           </div>
-
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Jun 2022</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">HTML & CSS</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">ProbitAcademy</p>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Digital Transformation Master Classes</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Women in Tech Kosovo &middot; Feb 2024</div>
           </div>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">ASU Certificate of Innovation</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Cintana Education &middot; Dec 2023</div>
+          </div>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Design Thinking</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Thomas More University &middot; Nov 2023</div>
+          </div>
+        </div>
 
-          <div class="project-card" style="padding: 1.1rem;">
-            <span class="timeline-date">Jul 2019</span>
-            <h4 style="font-size: 0.92rem; font-weight: 600; margin-bottom: 0.2rem;">Excel 2016 Program</h4>
-            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 0;">INFORMATIKA</p>
+        <h4 style="font-size:0.78rem; text-transform:uppercase; letter-spacing:0.09em; font-weight:700; color:var(--emerald); margin:2rem 0 0.5rem;">Foundations</h4>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); column-gap:2rem; row-gap:0.45rem;">
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Techstitution Programme</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">Beetroot Academy &middot; Sep – Nov 2022</div>
+          </div>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Web Development</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">ProbitAcademy &middot; Sep 2022</div>
+          </div>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">HTML & CSS</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">ProbitAcademy &middot; Jun 2022</div>
+          </div>
+          <div style="padding:0.5rem 0; border-bottom:1px solid var(--border);">
+            <div style="font-size:0.9rem; font-weight:600; line-height:1.3;">Excel 2016 Program</div>
+            <div style="font-size:0.78rem; color:var(--text-secondary);">INFORMATIKA &middot; Jul 2019</div>
           </div>
         </div>
       </div>
@@ -650,7 +812,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js?v=6"></script>
 </body>
 
 </html>

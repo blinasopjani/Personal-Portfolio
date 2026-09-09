@@ -32,6 +32,11 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 110px;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: var(--bg);
@@ -173,7 +178,7 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 5rem;
+  padding-top: 8rem;
 }
 
 .hero-grid {
@@ -348,7 +353,7 @@ a {
 
 /* Sections */
 section {
-  padding: 8rem 0;
+  padding: 4.75rem 0;
 }
 
 /* Colored section backgrounds */
@@ -371,7 +376,7 @@ section {
 }
 
 .section-header {
-  margin-bottom: 4rem;
+  margin-bottom: 2.75rem;
 }
 
 .section-label {
@@ -392,7 +397,7 @@ section {
 .section-label.rose { color: var(--rose); }
 
 .section-header h2 {
-  font-size: 3rem;
+  font-size: 2.4rem;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
 }
@@ -407,12 +412,12 @@ section {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 
 .about-text p {
   color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.1rem;
 }
 
@@ -456,13 +461,13 @@ section {
 .resume-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 2.5rem;
 }
 
 .timeline {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.9rem;
 }
 
 .timeline-item {
@@ -517,7 +522,7 @@ section {
 .projects-filter {
   display: flex;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .filter-btn {
@@ -539,15 +544,15 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
 }
 
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 2.5rem 2rem;
+  padding: 1.5rem 1.5rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -588,21 +593,21 @@ section {
 }
 
 .project-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-card p {
   color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project-tech span {
@@ -630,7 +635,7 @@ section {
 /* Footer */
 footer {
   border-top: 1px solid var(--border);
-  padding: 6rem 0 3rem;
+  padding: 4rem 0 2.5rem;
   background: var(--bg-card);
 }
 
@@ -693,4 +698,64 @@ footer {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+/* Project Carousels */
+.projects-carousels {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.cat-block { position: relative; }
+.cat-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.cat-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-weight: 700;
+}
+.cat-arrows { display: flex; gap: 0.5rem; }
+.car-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.car-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+.carousel-track {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 0.5rem 0.25rem 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.carousel-track::-webkit-scrollbar { display: none; }
+.carousel-track .project-card {
+  flex: 0 0 330px;
+  scroll-snap-align: start;
+}
+@media (max-width: 480px) {
+  .carousel-track .project-card { flex: 0 0 85%; }
 }
